@@ -1,0 +1,196 @@
+{\rtf1\ansi\ansicpg936\cocoartf1347\cocoasubrtf570
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fswiss\fcharset0 Helvetica-Light;
+}
+{\colortbl;\red255\green255\blue255;\red41\green66\blue119;\red195\green116\blue28;\red180\green69\blue0;
+\red71\green106\blue151;\red223\green7\blue0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww18360\viewh13740\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs72 \cf0 iOS1509
+\f1 \'bf\'ce\'bc\'fe
+\f0 \
+\
+
+\f1 \'d0\'d5\'c3\'fb\'a3\'ba\'b8\'df\'c0\'a4\'c5\'f3
+\f0 \
+email:gao.kunpeng@1000phone.com\
+QQ:632204910\
+\
+\
+http://192.168.84.90/~gaokunpeng/\
+\
+day01 
+\f1 \'b0\'ae\'cf\'de\'c3\'e2\'b5\'da\'d2\'bb\'cc\'ec\
+\'cf\'de\'c3\'e2\'bd\'e7\'c3\'e6\
+\
+\'d3\'c3xib\'b5\'c4\'b7\'bd\'ca\'bd\'d7\'d4\'b6\'a8\'d6\'c6cell\'b5\'c4\'b2\'bd\'d6\'e8\
+1\'a1\'a2\'bc\'cc\'b3\'d0\'d3\'daUITableViewCell\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'c0\'e0\'d0\'cd\'a3\'ac\'d7\'a2\'d2\'e2\'d1\'a1\'d6\'d0also create xib file\'d1\'a1\'cf\'ee\'a3\'ac\
+2\'a1\'a2\'d4\'da\'c9\'fa\'b3\'c9\'b5\'c4\'d3\'eb\'c0\'e0\'c3\'fb\'cd\'ac\'c3\'fb\'b5\'c4xib\'ce\'c4\'bc\'fe\'d6\'d0\'cc\'ed\'bc\'d3\'d7\'d3\'ca\'d3\'cd\'bc\'bf\'d8\'bc\'fe\'a3\'ac\'d0\'e8\'d2\'aa\'cf\'d4\'ca\'be\'ca\'b2\'c3\'b4\'bf\'d8\'bc\'fe\'a3\'ac\'d4\'da\'d3\'d2\'cf\'c2\'bd\'c7\'b5\'c4\'cb\'d1\'cb\'f7\'bf\'f2\'cb\'d1\'cb\'f7\'be\'cd\'c4\'dc\'d5\'d2\'b5\'bd\'a3\'ac\'c8\'bb\'ba\'f3\'bd\'ab\'bf\'d8\'bc\'fe\'cd\'cf\'b6\'af\'b5\'bdcell\'c9\'cf\'c3\'e6\'a3\'ac\'d7\'f7\'ce\'aacontentView\'b5\'c4\'d7\'d3\'ca\'d3\'cd\'bc\
+3\'a1\'a2\'bd\'abxib\'ce\'c4\'bc\'fe\'c9\'cf\'c3\'e6\'b5\'c4\'bf\'d8\'bc\'fe\'c1\'ac\'b5\'bdcell\'c0\'e0\'d0\'cd\'b5\'c4\'cd\'b7\'ce\'c4\'bc\'fe\'c0\'ef\'c3\'e6\'a3\'ac\'d5\'eb\'b6\'d4\'c3\'bf\'d2\'bb\'b8\'f6\'bf\'d8\'bc\'fe\'a3\'ac\'cf\'c8\'d3\'c3\'ca\'f3\'b1\'ea\'d1\'a1\'d6\'d0\'b8\'c3\'bf\'d8\'bc\'fe\'a3\'ac\'c8\'bb\'ba\'f3\'b0\'b4\'d7\'a1ctrl\'b9\'a6\'c4\'dc\'bc\'fc\'a3\'ac\'b4\'d3\'bf\'d8\'bc\'fe\'c9\'cf\'cf\'f2\'cd\'b7\'ce\'c4\'bc\'fe\'cd\'cf\'b6\'af\'ca\'f3\'b1\'ea\'b9\'e2\'b1\'ea\'a3\'ac\'d4\'da@interface\'ba\'cd@end\'d6\'d0\'bc\'e4\'cb\'c9\'ca\'d6\'a3\'ac\'b5\'af\'b3\'f6\'b5\'c4\'b6\'d4\'bb\'b0\'bf\'f2\'c0\'ef\'c3\'e6\'cc\'ee\'d0\'b4\'ca\'f4\'d0\'d4\'c3\'fb\'d7\'d6\'be\'cd\'bf\'c9\'d2\'d4(\'d7\'a2\'d2\'e2\'b2\'bb\'d2\'aa\'ba\'cd\'b8\'b8\'c0\'e0\'c0\'ef\'c3\'e6\'b5\'c4imageView\'a1\'a2textLabel\'a1\'a2detailTextLabel\'d5\'e2\'bc\'b8\'b8\'f6\'ca\'f4\'d0\'d4\'d6\'d8\'c3\'fb)\
+\
+4\'a1\'a2\'d7\'ee\'ba\'f3\'d4\'dacell\'b5\'c4\'ca\'b5\'cf\'d6\'ce\'c4\'bc\'fe\'cf\'d4\'ca\'be\'ca\'fd\'be\'dd,\'cd\'ac\'ca\'b1\'d7\'a2\'d2\'e2\'d4\'daxib\'ce\'c4\'bc\'fe\'c0\'ef\'c3\'e6\'b5\'c4Identifier\'c0\'ef\'c3\'e6\'cc\'ee\'d0\'b4\'d6\'d8\'d3\'c3id(\'c0\'fd\'c8\'e7@\'a1\'b0myCellId\'a1\'b1)\
+\
+5\'a1\'a2\'d4\'daUITableView\'b5\'c4\'b4\'fa\'c0\'ed\'b7\'bd\'b7\'a8\'c0\'ef\'c3\'e6\'b4\'b4\'bd\'a8cell\
+//\'c0\'fd\'c8\'e7\
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath\
+\{\
+		static NSString *cellId = @\'a1\'b0myCellId\'a1\'b1;\
+\
+		BookCell  * cell = [tableView dequeueReusableCellWithIndentifier:cellId];\
+		if (nil == cell) \{\
+				cell = [[[NSBundle mainBundle]   loadNibNamed:@\'a1\'b0BookCell\'a1\'b1owner:nil options:nil] lastObject] ;\
+	\}\
+\
+	//\'cf\'d4\'ca\'be\'ca\'fd\'be\'dd\
+\
+      return cell;\
+\}\
+\
+day01-day06\'b0\'ae\'cf\'de\'c3\'e2\
+day07\'bf\'bc\'ca\'d4\
+day08 \'b9\'ca\'ca\'c2\'b0\'e6(UIStoryboard)\
+\'d2\'bb\'a1\'a2\'b9\'ca\'ca\'c2\'b0\'e6\'bd\'e9\'c9\'dc\
+1\'a1\'a2\'b9\'ca\'ca\'c2\'b0\'e6\'ca\'c7\'d3\'c3\'bf\'c9\'ca\'d3\'bb\'af\'bd\'e7\'c3\'e6\'b5\'c4\'b7\'bd\'ca\'bd\'c0\'b4\'ca\'b5\'cf\'d6\'cf\'d4\'ca\'be\'ba\'cd\'cc\'f8\'d7\'aa,\
+Main.storyboard\
+2\'a1\'a2\'b8\'c5\'c4\'ee\
+1)scene\'a3\'a8\'b3\'a1\'be\'b0\'a3\'a9:\'b1\'ed\'ca\'be\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'ba\'cd\'b9\'d8\'c1\'aa\'b5\'c4\'bd\'e7\'c3\'e6\
+2)segue:\'b1\'ed\'ca\'be\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'d6\'b1\'bd\'d3\'b5\'c4\'b9\'d8\'cf\'b5\
+3)controls\
+\
+\
+\'b6\'fe\'a1\'a2\'ca\'b5\'cf\'d6present\'b9\'a6\'c4\'dc\
+1\'a1\'a2\'b5\'da\'d2\'bb\'d6\'d6\'b7\'bd\'ca\'bd\
+1)\'d4\'daMain.storyboard\'ce\'c4\'bc\'fe\'b5\'c4ViewController\'bd\'e7\'c3\'e6\'c9\'cf\'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6\'b0\'b4\'c5\'a5,\'cf\'d4\'ca\'be\'b5\'da\'d2\'bb\'b8\'f6\'b0\'b4\'c5\'a5\'b5\'c4\'ce\'c4\'d7\'d6\
+2)\'cf\'f2Main.storyboard\'ce\'c4\'bc\'fe\'c9\'cf\'c3\'e6\'cd\'cf\'d2\'bb\'b8\'f6UIViewController\'b6\'d4\'cf\'f3\'a3\'ac\'d4\'daUIViewController\'bd\'e7\'c3\'e6\'c9\'cf\'c3\'e6\'bc\'d3\'d2\'bb\'b8\'f6UILabel\'a3\'ac\'cf\'d4\'ca\'be\'b5\'da\'d2\'bb\'d6\'d6\'b7\'bd\'ca\'bd\'ca\'b5\'cf\'d6\'cc\'f8\'d7\'aa\
+3)\'d1\'a1\'d6\'d0\'b0\'b4\'c5\'a5,\'b0\'b4\'d7\'a1ctrl\'bc\'fc\'a3\'ac\'cd\'cf\'b6\'af\'b5\'bdUIViewController\'bd\'e7\'c3\'e6,\'d4\'da\'b5\'af\'b3\'f6\'b5\'c4\'bd\'e7\'c3\'e6\'c9\'cf\'d1\'a1\'d4\'f1present modally\
+\
+2\'a1\'a2\'b5\'da\'b6\'fe\'d6\'d6\'b7\'bd\'ca\'bd\
+1)\'d4\'daMain.storyboard\'ce\'c4\'bc\'fe\'b5\'c4ViewController\'bd\'e7\'c3\'e6\'c9\'cf\'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6\'b0\'b4\'c5\'a5,\'cf\'d4\'ca\'be\'ce\'c4\'d7\'d6\'a1\'b0\'b5\'da\'b6\'fe\'b8\'f6\'a1\'b1\
+2)\'cf\'f2Main.storyboard\'ce\'c4\'bc\'fe\'c9\'cf\'c3\'e6\'cd\'cf\'d2\'bb\'b8\'f6UIViewController\'b6\'d4\'cf\'f3\'a3\'ac\'d4\'daUIViewController\'bd\'e7\'c3\'e6\'c9\'cf\'c3\'e6\'bc\'d3\'d2\'bb\'b8\'f6UILabel\'a3\'ac\'cf\'d4\'ca\'be\'b5\'da\'b6\'fe\'d6\'d6\'b7\'bd\'ca\'bd\
+3)\'d1\'a1\'d6\'d0ViewController\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'b6\'d4\'cf\'f3,\'b0\'b4\'d7\'a1ctrl\'bc\'fc,\'cd\'cf\'b6\'af\'b5\'bd\'d0\'c2\'bc\'d3\'b5\'c4UIViewController\'bd\'e7\'c3\'e6,\'d4\'da\'b5\'af\'b3\'f6\'b5\'c4\'bd\'e7\'c3\'e6\'c9\'cf\'d1\'a1\'d4\'f1present modally\
+4)\'d1\'a1\'d6\'d0\'d0\'c2\'bc\'d3\'b5\'c4segue\'b6\'d4\'cf\'f3,\'d4\'da\'d3\'d2\'b1\'df\'b9\'a4\'be\'df\'c0\'b8\'b5\'c4\'b5\'da\'cb\'c4\'b8\'f6\'cf\'c2\'c3\'e6,identifier\'ba\'f3\'c3\'e6\'bc\'d3\'d2\'bb\'b8\'f6\'b1\'ea\'ca\'be\'b7\'fb,\'c0\'fd\'c8\'e7\'ce\'aa\'a1\'b1secondSegue\'a1\'b1\
+5)\'bd\'ab\'b5\'da\'b6\'fe\'b8\'f6\'b0\'b4\'c5\'a5\'b5\'c4\'b5\'e3\'bb\'f7\'ca\'c2\'bc\'fe\'c1\'b7\'b5\'bdViewController\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'c0\'e0\'c0\'ef\'c3\'e6,\'d4\'da\'ca\'c2\'bc\'fe\'b5\'c4\'b7\'bd\'b7\'a8\'c0\'ef\'c3\'e6\'a3\'ac\'ca\'b5\'cf\'d6\'b4\'fa\'c2\'eb[self performSegueWithIdentifier:@\'a1\'b0secondSegue\'a1\'b1 sender:nil]\
+6)\'c8\'e7\'b9\'fb\'d0\'e8\'d2\'aa\'b4\'ab\'b5\'dd\'b2\'ce\'ca\'fd\
+a)\'bd\'ab\'d0\'c2\'bc\'d3\'b5\'c4\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'b9\'d8\'c1\'aa\'d2\'bb\'b8\'f6\'c0\'e0\'d0\'cd\'a3\'ac\'d2\'b2\'be\'cd\'ca\'c7\'d0\'c2\'bd\'a8\'d2\'bb\'b8\'f6\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'c0\'e0\'d0\'cd(SecondViewController),\'d4\'dastoryboard\'ce\'c4\'bc\'fe\'d6\'d0\'d1\'a1\'d6\'d0\'d0\'c2\'b5\'c4\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'a3\'ac\'d4\'da\'d3\'d2\'b1\'df\'b5\'c4\'b9\'a4\'be\'df\'c0\'b8\'b5\'c4\'b5\'da\'c8\'fd\'b8\'f6\'cf\'c2\'c3\'e6\'d0\'de\'b8\'c4\'c0\'e0\'d0\'cd\'ce\'aaSecondViewController,\'cd\'ac\'ca\'b1\'bd\'abUILabel\'b6\'d4\'cf\'f3\'c1\'ac\'b5\'bd\'c0\'e0\'ce\'c4\'bc\'fe\'c0\'ef\'c3\'e6\
+b)\'b8\'f8SecondViewController\'bc\'d3\'d2\'bb\'b8\'f6\'ca\'f4\'d0\'d4param\'c0\'b4\'bd\'d3\'ca\'dc\'b2\'ce\'ca\'fd,\'d4\'daViewController\'c0\'e0\'d0\'cd\'c0\'ef\'c3\'e6\'ca\'b5\'cf\'d6\'b7\'bd\'b7\'a8\
+- (void)prepareForSegue:(UIStorySegue *)segue sender:(id)sender\
+\{\
+	 id destCtrl = segue.destinationViewController;\
+\
+	 if ([destCtrl isKindOfClass:[SecondViewontroller class]])\
+	\{\
+			SecondViewController *secondCtrl = (SecondViewController *)destCtrl;\
+		secondCtrl.param = @\'a1\'b0\'b2\'ce\'ca\'fd\'b6\'fe\'a1\'b1;\
+	\}\
+\}\
+\
+\
+3\'a1\'a2\'b5\'da\'c8\'fd\'d6\'d6\'b7\'bd\'ca\'bd\
+1)\'d4\'daMain.storyboard\'ce\'c4\'bc\'fe\'b5\'c4ViewController\'bd\'e7\'c3\'e6\'c9\'cf\'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6\'b0\'b4\'c5\'a5,\'cf\'d4\'ca\'be\'ce\'c4\'d7\'d6\'a1\'b0\'b5\'da\'c8\'fd\'b8\'f6\'a1\'b1,\'bd\'ab\'b0\'b4\'c5\'a5\'b5\'c4\'b5\'e3\'bb\'f7\'ca\'c2\'bc\'fe\'c1\'ac\'b5\'bdViewController\'ce\'c4\'bc\'fe\'c0\'ef\'c3\'e6\
+2)\'cf\'f2Main.storyboard\'ce\'c4\'bc\'fe\'c9\'cf\'c3\'e6\'cd\'cf\'d2\'bb\'b8\'f6UIViewController\'b6\'d4\'cf\'f3\'a3\'ac\'d4\'daUIViewController\'bd\'e7\'c3\'e6\'c9\'cf\'c3\'e6\'bc\'d3\'d2\'bb\'b8\'f6UILabel\
+3)\'bd\'ab\'d0\'c2\'bc\'d3\'b5\'c4\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'b9\'d8\'c1\'aa\'d2\'bb\'b8\'f6\'c0\'e0\'d0\'cd\'a3\'ac\'d2\'b2\'be\'cd\'ca\'c7\'d0\'c2\'bd\'a8\'d2\'bb\'b8\'f6\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'c0\'e0\'d0\'cd(ThirdViewController),\'d4\'dastoryboard\'ce\'c4\'bc\'fe\'d6\'d0\'d1\'a1\'d6\'d0\'d0\'c2\'b5\'c4\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'a3\'ac\'d4\'da\'d3\'d2\'b1\'df\'b5\'c4\'b9\'a4\'be\'df\'c0\'b8\'b5\'c4\'b5\'da\'c8\'fd\'b8\'f6\'cf\'c2\'c3\'e6\'d0\'de\'b8\'c4\'c0\'e0\'d0\'cd\'ce\'aaThirdViewController,\'cd\'ac\'ca\'b1\'bd\'abUILabel\'b6\'d4\'cf\'f3\'c1\'ac\'b5\'bd\'c0\'e0\'ce\'c4\'bc\'fe\'c0\'ef\'c3\'e6,\'b8\'f8ThirdViewController\'cc\'ed\'bc\'d3\'ca\'f4\'d0\'d4param\
+4)\'d4\'daMain.storyboard\'ce\'c4\'bc\'fe\'b5\'c4\'d3\'d2\'b1\'df\'b9\'a4\'be\'df\'c0\'b8\'b5\'c4\'b5\'da\'c8\'fd\'b8\'f6\'cf\'c2\'c3\'e6\'c9\'e8\'d6\'c3stroyboard id\'ce\'aa@\'a1\'b0third\'a1\'b1\
+5)\'ca\'b5\'cf\'d6\'b5\'e3\'bb\'f7\'ca\'c2\'bc\'fe\'b5\'c4\'b7\'bd\'b7\'a8\
+\pard\tx800\pardeftab800\pardirnatural
+
+\f2 \cf0 \CocoaLigature0 - (\cf2 IBAction\cf0 )click3rdBtn:(\cf2 id\cf0 )sender \{\
+    \
+    \cf3 //
+\f1 \'b4\'b4\'bd\'a8\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'b6\'d4\'cf\'f3
+\f2 \cf0 \
+    \cf3 /*\
+     
+\f1 \'b5\'da\'d2\'bb\'b8\'f6\'b2\'ce\'ca\'fd
+\f2 :storyboard
+\f1 \'ce\'c4\'bc\'fe\'b5\'c4\'c3\'fb\'d7\'d6
+\f2 \
+     
+\f1 \'b5\'da\'b6\'fe\'b8\'f6\'b2\'ce\'ca\'fd
+\f2 :nil(mainBundle)\
+     */\cf0 \
+    \cf4 UIStoryboard\cf0  *sb = [\cf4 UIStoryboard\cf0  \cf5 storyboardWithName\cf0 :\cf6 @"Main"\cf0  \cf5 bundle\cf0 :\cf2 nil\cf0 ];\
+    \cf3 //
+\f1 \'b2\'ce\'ca\'fd
+\f2 :
+\f1 \'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'d4\'da
+\f2 storyboard
+\f1 \'c0\'ef\'c3\'e6\'b5\'c4\'b1\'ea\'ca\'be\'b7\'fb
+\f2 \cf0 \
+    \cf4 ThirdViewController\cf0  *thirdCtrl = [sb \cf5 instantiateViewControllerWithIdentifier\cf0 :\cf6 @"third"\cf0 ];\
+    thirdCtrl.\cf5 param\cf0  = \cf6 @"
+\f1 \'b5\'da\'c8\'fd\'b8\'f6\'b2\'ce\'ca\'fd
+\f2 "\cf0 ;\
+    \
+    [\cf2 self\cf0  \cf5 presentViewController\cf0 :thirdCtrl \cf5 animated\cf0 :\cf2 YES\cf0  \cf5 completion\cf0 :\cf2 nil\cf0 ];\
+ \
+\}
+\f1 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\'c8\'fd\'a1\'a2\'b5\'bc\'ba\'bd\
+1)\'d4\'daMain.storyboard\'ce\'c4\'bc\'fe\'c0\'ef\'c3\'e6\'a3\'ac\'c9\'be\'b3\'fd\'c4\'ac\'c8\'cf\'b5\'c4ViewController\'a3\'ac\'cd\'cf\'d2\'bb\'b8\'f6UINavigationController\'b5\'bd\'bd\'e7\'c3\'e6\'c9\'cf,\'d1\'a1\'d6\'d0\'b5\'bc\'ba\'bd\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7,\'d4\'da\'d3\'d2\'b1\'df\'b5\'c4\'b9\'a4\'be\'df\'c0\'b8\'b5\'c4\'b5\'da\'cb\'c4\'b8\'f6\'cf\'c2\'c3\'e6\'d1\'a1\'d6\'d0is initial viewController,\'c9\'e8\'d6\'c3\'ce\'aa\'d6\'f7\'b4\'b0\'bf\'da\'b5\'c4\'b8\'f9\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\
+2)\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'c0\'e0\'c8\'e7ListViewController\'a3\'ac\'bc\'cc\'b3\'d0\'d3\'daUITableViewController\'a3\'ac\'bd\'abstoryboard\'ce\'c4\'bc\'fe\'c0\'ef\'c3\'e6\'b5\'bc\'ba\'bd\'b5\'c4rootViewController\'b5\'c4\'c0\'e0\'d0\'cd\'c9\'e8\'d6\'c3\'ce\'aaListViewController\
+3)\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6StudentCell\'c8\'a5\'b9\'d8\'c1\'aa\'c1\'d0\'b1\'ed\'b5\'c4cell\'a3\'ac\'c9\'e8\'d6\'c3storyboard\'ce\'c4\'bc\'fe\'c0\'ef\'c3\'e6cell\'b5\'c4\'c0\'e0\'d0\'cd\'ce\'aaStudentCell\'a3\'ac\'c9\'e8\'d6\'c3\'d6\'d8\'d3\'c3\'b1\'ea\'ca\'b6\'ce\'aacellId\'a3\'ac\'c9\'cf\'c3\'e6\'cc\'ed\'bc\'d3\'c8\'fd\'b8\'f6label\'a3\'ac\'b2\'a2\'bd\'ablabel\'c1\'ac\'b5\'bdStudentCell\'b5\'c4\'cd\'b7\'ce\'c4\'bc\'fe,\'d4\'daStudentCell\'c0\'e0\'d0\'cd\'c0\'ef\'c3\'e6\'ca\'b5\'cf\'d6\'cf\'d4\'ca\'be\'ca\'fd\'be\'dd\'b5\'c4\'b7\'bd\'b7\'a8\
+4)\'d4\'daListViewController\'c0\'ef\'c3\'e6\'b4\'b4\'bd\'a8\'ca\'fd\'be\'dd\'d4\'b4\'a3\'ac\'ca\'b5\'cf\'d6\'b1\'ed\'b8\'f1\'b5\'c4\'b4\'fa\'c0\'ed\'b7\'bd\'b7\'a8\
+5)\'ca\'b5\'cf\'d6\'b5\'e3\'bb\'f7cell\'cc\'f8\'d7\'aa\'cf\'ea\'c7\'e9\'b5\'c4\'b9\'a6\'c4\'dc\
+a)\'d0\'c2\'bd\'a8\'d2\'bb\'b8\'f6\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7DetailViewController\'a3\'ac\'d4\'dastoryboard\'ce\'c4\'bc\'fe\'c0\'ef\'c3\'e6\'cd\'cf\'bd\'f8\'d2\'bb\'b8\'f6\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'a3\'ac\'b8\'faDetailViewController\'b9\'d8\'c1\'aa\'c6\'f0\'c0\'b4\'a3\'ac\'c9\'cf\'c3\'e6\'bc\'d3\'d2\'bb\'b8\'f6UILabel\'c0\'b4\'cf\'d4\'ca\'be\'ca\'fd\'be\'dd\
+b\'a3\'a9\'d4\'dastoryboard\'ce\'c4\'bc\'fe\'c0\'ef\'c3\'e6\'a3\'ac\'d1\'a1\'d6\'d0cell\'a3\'ac\'b0\'b4\'d7\'a1ctrl\'bc\'fc\'a3\'ac\'cd\'cf\'b6\'af\'c1\'ac\'cf\'df\'b5\'bdDetailViewController\'b9\'d8\'c1\'aa\'b5\'c4\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'b6\'d4\'cf\'f3\'a3\'ac\'d4\'da\'b5\'af\'b3\'f6\'c1\'d0\'b1\'ed\'d6\'d0\'d1\'a1\'d4\'f1show\
+c)\'b4\'ab\'b2\'ce:\'d4\'daListViewController\'c0\'ef\'c3\'e6\'ca\'b5\'cf\'d6\'b7\'bd\'b7\'a8\
+\pard\tx800\pardeftab800\pardirnatural
+
+\f2 \cf0 \CocoaLigature0 - (\cf2 void\cf0 )prepareForSegue:(\cf4 UIStoryboardSegue\cf0  *)segue sender:(\cf2 id\cf0 )sender \{\
+    \cf3 // Get the new view controller using [segue destinationViewController].\cf0 \
+    \cf3 // Pass the selected object to the new view controller.\cf0 \
+    \
+    \cf2 id\cf0  destCtrl = segue.\cf5 destinationViewController\cf0 ;\
+    \cf2 if\cf0  ([destCtrl \cf5 isKindOfClass\cf0 :[\cf4 DetailViewController\cf0  \cf5 class\cf0 ]]) \{\
+        \
+        \cf4 DetailViewController\cf0  *detailCtrl = (\cf4 DetailViewController\cf0  *)destCtrl;\
+        \
+        \cf3 //
+\f1 \'bb\'f1\'c8\'a1
+\f2 cell
+\f1 \'b6\'d4\'cf\'f3
+\f2 \cf0 \
+        \cf3 //
+\f1 \'cc\'f8\'d7\'aa\'ca\'c2\'bc\'fe\'ca\'c7\'b5\'e3\'bb\'f7
+\f2 cell
+\f1 \'b4\'a5\'b7\'a2\'b5\'c4
+\f2 \cf0 \
+        \cf2 if\cf0  ([sender \cf5 isKindOfClass\cf0 :[\cf4 StudentCell\cf0  \cf5 class\cf0 ]]) \{\
+            \cf4 StudentCell\cf0  *cell = (\cf4 StudentCell\cf0  *)sender;\
+            \
+            \cf3 //
+\f1 \'b4\'ab\'b2\'ce
+\f2 \cf0 \
+            detailCtrl.\cf5 param\cf0  = cell.\cf5 nameLabel\cf0 .\cf5 text\cf0 ;\
+        \}       \
+    \}\
+\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1 \cf0 \CocoaLigature1 \
+\
+\'cb\'c4\'a1\'a2\'b1\'ea\'c7\'a9\'c0\'b8\'bf\'d8\'d6\'c6\'c6\'f7\
+1\'a1\'a2\'c9\'be\'b3\'fdstoryboard\'ce\'c4\'bc\'fe\'c0\'ef\'c3\'e6\'b5\'c4ViewController\'b6\'d4\'cf\'f3\'a3\'ac\'cd\'cf\'d2\'bb\'b8\'f6UITabBarController\'b5\'bdstoryboard\'ce\'c4\'bc\'fe\'c0\'ef\'c3\'e6\
+2\'a1\'a2\'c9\'be\'b3\'fdtabBarCtrl\'b9\'d8\'c1\'aa\'b5\'c4\'c1\'bd\'b8\'f6\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'a3\'ac\'cd\'cf\'b6\'af\'c1\'bd\'b8\'f6UINavigationViewController\'b5\'bdstoryboard\'ce\'c4\'bc\'fe\'c0\'ef\'c3\'e6,\
+3\'a1\'a2\'d1\'a1\'d6\'d0tabBarCtrl\'a3\'ac\'b0\'b4\'d7\'a1ctrl\'bc\'fc\'a3\'ac\'cd\'cf\'b6\'af\'b5\'bd\'b5\'bc\'ba\'bd\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'c9\'cf\'c3\'e6\'a3\'ac\'d4\'da\'c1\'d0\'b1\'ed\'d6\'d0\'d1\'a1\'d4\'f1viewcontrollers\'a3\'ac\'bd\'ab\'b5\'bc\'ba\'bd\'b7\'c5\'b5\'bdtabBarCtrl\'c9\'cf\
+4\'a1\'a2\'c9\'e8\'d6\'c3tabBarItem\'b5\'c4\'ce\'c4\'d7\'d6\'ba\'cd\'cd\'bc\'c6\'ac\
+\'d1\'a1\'d6\'d0tabBarItem\'a3\'ac\'d4\'da\'d3\'d2\'b1\'df\'b9\'a4\'be\'df\'c0\'b8\'b5\'c4\'b5\'da\'cb\'c4\'b8\'f6\'cf\'c2\'c3\'e6\'c9\'e8\'d6\'c3\
+\
+\
+\'ce\'e5\'a1\'a2\'c0\'fd\'d7\'d3\
+storyboard\
+\'d3\'c5\'b5\'e3\
+\'ca\'b5\'cf\'d6\'bd\'e7\'c3\'e6\'bc\'f2\'b5\'a5\
+\
+\'c8\'b1\'b5\'e3\
+\'d0\'de\'b8\'c4\'b1\'c8\'bd\'cf\'b8\'b4\'d4\'d3\
+\
+\
+\
+\
+\
+\
+}
